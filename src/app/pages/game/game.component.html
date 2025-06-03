@@ -1,1 +1,20 @@
-<p>game works!</p>
+<div class="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-4">
+  <div class="text-sm text-gray-400 absolute top-4 right-4">Tempo restante: <span class="font-bold text-lg text-green-400">{{ timeLeft }}</span>s</div>
+
+  <h2 class="text-3xl font-bold mb-6 text-green-500">Digite a palavra:</h2>
+
+  <div class="bg-gray-800 px-6 py-4 rounded-lg shadow-md mb-4 text-2xl font-semibold tracking-wider">
+    {{ currentWord }}
+  </div>
+
+  <input
+    [(ngModel)]="userInput"
+    (keydown.enter)="checkWord()"
+    placeholder="Digite aqui..."
+    class="w-full max-w-md px-4 py-3 rounded-xl text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+  />
+
+  <div class="mt-8 text-lg">
+    Pontuação: <span class="font-bold text-green-400">{{ score }}</span>
+  </div>
+</div>
