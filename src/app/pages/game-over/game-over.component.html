@@ -1,4 +1,4 @@
-<div class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white text-center px-4">
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white text-center px-4 animate-fade">
   <h1 class="text-4xl sm:text-5xl font-extrabold text-green-400 mb-4">Fim de Jogo!</h1>
 
   <p class="text-xl text-gray-300 mb-2">Sua pontuação:</p>
@@ -7,7 +7,7 @@
   <p class="text-lg text-gray-400 italic mb-8">{{ message }}</p>
 
   <button
-    class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition-all"
+    class="transition-transform transform hover:scale-105 duration-300 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition-all"
     (click)="restartGame()"
   >
     Jogar Novamente

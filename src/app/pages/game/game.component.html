@@ -3,9 +3,12 @@
 
   <h2 class="text-3xl font-bold mb-6 text-green-500">Digite a palavra:</h2>
 
-  <div class="bg-gray-800 px-6 py-4 rounded-lg shadow-md mb-4 text-2xl font-semibold tracking-wider">
-    {{ currentWord }}
-  </div>
+  <div
+  class="bg-gray-800 px-6 py-4 rounded-lg shadow-md mb-4 text-2xl font-semibold tracking-wider animate-fade"
+  [class.animate-none]="!wordChanged"
+>
+  {{ currentWord }}
+</div>
 
   <input
     [(ngModel)]="userInput"

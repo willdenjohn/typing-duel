@@ -12,6 +12,7 @@ import { interval, takeWhile } from 'rxjs';
 export class GameComponent implements OnInit {
   private router = inject(Router);
 
+  wordChanged = true;
   currentWord = '';
   userInput = '';
   score = 0;
@@ -44,6 +45,12 @@ export class GameComponent implements OnInit {
   nextWord() {
     const randomIndex = Math.floor(Math.random() * this.words.length);
     this.currentWord = this.words[randomIndex];
+    this.wordChanged = true;
+
+    // Remove a classe de animação após 300ms para permitir nova ativação depois
+    setTimeout(() => {
+      this.wordChanged = false;
+    }, 300);
   }
 
   checkWord() {
