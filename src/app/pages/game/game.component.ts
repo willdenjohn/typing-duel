@@ -29,7 +29,7 @@ export class GameComponent implements OnInit {
   }
 
   startTimer() {
-    interval(1000)
+    interval(100)
       .pipe(takeWhile(() => this.timeLeft > 0))
       .subscribe(() => {
         this.timeLeft--;

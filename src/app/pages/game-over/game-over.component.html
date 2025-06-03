@@ -1,1 +1,15 @@
-<p>game-over works!</p>
+<div class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white text-center px-4">
+  <h1 class="text-4xl sm:text-5xl font-extrabold text-green-400 mb-4">Fim de Jogo!</h1>
+
+  <p class="text-xl text-gray-300 mb-2">Sua pontuação:</p>
+  <div class="text-5xl font-bold text-yellow-400 mb-6">{{ score }}</div>
+
+  <p class="text-lg text-gray-400 italic mb-8">{{ message }}</p>
+
+  <button
+    class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition-all"
+    (click)="restartGame()"
+  >
+    Jogar Novamente
+  </button>
+</div>
